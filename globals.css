@@ -1,0 +1,47 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; font-family: Arial, 'Noto Sans Bengali', sans-serif; color: #0f1f39; }
+body { background: radial-gradient(circle at 10px 10px, #dff1ff 2px, transparent 3px), #f8fcff; background-size: 32px 32px; }
+.page-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.enrollment-card { width: min(1150px, 100%); min-height: 720px; display: grid; grid-template-columns: 43% 57%; border-radius: 22px; overflow: hidden; background: white; box-shadow: 0 26px 70px rgba(10, 30, 60, .14); }
+.left-panel { position: relative; background: linear-gradient(135deg, #0b3d25, #07152d); color: white; overflow: hidden; }
+.left-panel:before { content: ''; position: absolute; inset: 0; background: url('/edustika-logo.png') center 58% / 75% no-repeat; opacity: .08; filter: grayscale(1); }
+.overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,17,38,.72), rgba(5,18,36,.94)); }
+.left-content { position: relative; z-index: 2; padding: 48px; height: 100%; display: flex; flex-direction: column; }
+.logo-box { width: 78px; height: 78px; border-radius: 18px; background: rgba(255,255,255,.12); display: grid; place-items: center; border: 1px solid rgba(255,255,255,.25); overflow: hidden; }
+.logo-box img { object-fit: contain; }
+h1 { font-size: 42px; margin: 38px 0 8px; letter-spacing: -.5px; }
+h2 { font-size: 31px; margin: 0 0 18px; color: #17c964; }
+.intro { font-size: 18px; line-height: 1.75; color: #e8f2ff; margin: 0 0 30px; }
+.features { display: grid; gap: 14px; }
+.features p { margin: 0; display: flex; gap: 10px; align-items: center; font-weight: 700; }
+.features svg { color: #20d66b; fill: rgba(32,214,107,.08); }
+.payment-box { margin-top: auto; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); padding: 22px 24px; border-radius: 16px; display: grid; gap: 8px; width: 100%; max-width: 390px; }
+.payment-box span { color: #c8d6ea; }
+.payment-box strong { width: fit-content; color: #e20a72; background: white; padding: 8px 16px; border-radius: 4px; }
+.payment-box small { color: #dbe7f7; }
+.form-panel { padding: 48px; }
+.section-title { display: flex; align-items: center; gap: 8px; font-size: 22px; font-weight: 800; color: #092344; }
+.section-title svg { color: #0aa84f; }
+.section-title.second { margin-top: 34px; }
+.line { height: 1px; background: #e8eef6; margin: 12px 0 18px; }
+.grid { display: grid; gap: 18px; margin-bottom: 20px; }
+.three { grid-template-columns: repeat(3, 1fr); }
+.two { grid-template-columns: repeat(2, 1fr); }
+.field { display: grid; gap: 8px; }
+.field span, .label { font-size: 14px; font-weight: 700; color: #394a63; }
+.input-wrap { height: 50px; border: 1px solid #dce6f2; border-radius: 12px; display: flex; align-items: center; gap: 10px; padding: 0 14px; background: #fbfdff; }
+.input-wrap:focus-within { border-color: #18b75b; box-shadow: 0 0 0 4px rgba(24,183,91,.11); }
+.input-wrap i { display: flex; color: #8aa0bc; }
+.input-wrap svg { width: 18px; height: 18px; }
+input { width: 100%; border: 0; outline: 0; background: transparent; font-size: 15px; color: #10213a; }
+.class-row { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+.class-btn { padding: 13px 24px; border: 1px solid #dbe6f3; border-radius: 12px; background: white; font-size: 16px; font-weight: 800; color: #1c3150; cursor: pointer; }
+.class-btn.active { border-color: #15aa50; background: #eaf9ef; color: #087137; }
+.price-card { margin-top: 32px; background: #07142b; color: white; border-radius: 16px; padding: 28px 24px; display: flex; justify-content: space-between; align-items: center; gap: 18px; box-shadow: 0 14px 30px rgba(7,20,43,.22); }
+.price-card span { color: #b9c7da; font-weight: 700; }
+.price-card h3 { margin: 12px 0 0; color: #17c964; font-size: 30px; }
+.price-card small { color: white; font-size: 18px; }
+.submit-btn { border: 0; background: linear-gradient(135deg, #148d3d, #0c6d31); color: white; padding: 18px 28px; border-radius: 13px; font-weight: 900; font-size: 16px; cursor: pointer; min-width: 230px; }
+.submit-btn:disabled { opacity: .7; cursor: not-allowed; }
+.status { margin-top: 18px; padding: 12px 14px; border-radius: 10px; background: #eefbf3; color: #07592b; font-weight: 700; }
+@media (max-width: 900px) { .enrollment-card { grid-template-columns: 1fr; } .left-content, .form-panel { padding: 30px; } .three, .two { grid-template-columns: 1fr; } .price-card { align-items: stretch; flex-direction: column; } .submit-btn { width: 100%; } h1 { font-size: 34px; } }
